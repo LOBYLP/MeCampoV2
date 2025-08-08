@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeCampo Innovation - Clasificador de Tomates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #166534; /* Green-800 */
+        }
+        .highlight-text {
+            color: #22c55e; /* Green-500 */
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.25rem; /* text-4xl */
+            line-height: 2.5rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg class="h-8 w-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                </svg>
+                <span class="text-2xl font-bold text-gray-800">MeCampo <span class="text-green-600">Innovation</span></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#problema" class="text-gray-600 hover:text-green-600 transition">El Problema</a>
+                <a href="#solucion" class="text-gray-600 hover:text-green-600 transition">Nuestra Solución</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-green-600 transition">Beneficios</a>
+                <a href="#contacto" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                 <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+            <a href="#problema" class="block py-2 text-gray-600 hover:text-green-600 transition">El Problema</a>
+            <a href="#solucion" class="block py-2 text-gray-600 hover:text-green-600 transition">Nuestra Solución</a>
+            <a href="#beneficios" class="block py-2 text-gray-600 hover:text-green-600 transition">Beneficios</a>
+            <a href="#contacto" class="block mt-2 bg-green-600 text-white text-center px-4 py-2 rounded-full hover:bg-green-700 transition">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Deje de perder tiempo y dinero.</h1>
+                <p class="mt-4 text-lg md:text-xl text-green-200 max-w-3xl mx-auto">Presentamos el clasificador de tomates automático: la herramienta que optimiza su cosecha, aumenta sus ganancias y se paga sola en 10 días.</p>
+                <a href="#solucion" class="mt-8 inline-block bg-white text-green-700 font-bold px-8 py-3 rounded-full text-lg hover:bg-gray-100 transition transform hover:scale-105">Descubra Cómo</a>
+            </div>
+        </section>
+
+        <!-- El Problema Section -->
+        <section id="problema" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">El Costo Oculto de la Cosecha</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Cada día, los productores invierten horas de trabajo valioso y pagan salarios solo para separar tomates. Es un proceso lento, impreciso y costoso.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="card">
+                        <div class="flex justify-center mb-4">
+                            <svg class="h-16 w-16 text-red-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pérdida de Tiempo</h3>
+                        <p>Horas de trabajo manual que podrían dedicarse a otras tareas críticas del campo.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex justify-center mb-4">
+                            <svg class="h-16 w-16 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pérdida de Dinero</h3>
+                        <p>Un costo diario de más de **$560 MXN** en mano de obra solo para clasificar.</p>
+                    </div>
+                    <div class="card">
+                         <div class="flex justify-center mb-4">
+                           <svg class="h-16 w-16 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pérdida de Oportunidad</h3>
+                        <p>Una clasificación inconsistente reduce el valor del producto en el mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- La Solución Section -->
+        <section id="solucion" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://imgur.com/a/ca98f4h" alt="Máquina clasificadora de tomates" class="rounded-lg shadow-2xl w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="section-title">Automatización Simple y Efectiva.</h2>
+                        <p class="mt-4 text-lg text-gray-600">Nuestra máquina utiliza un sistema preciso de pesaje para clasificar automáticamente cada tomate en tres categorías (<80g, 80-120g, >120g). Es simple, robusta y está diseñada para el campo.</p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>**Fácil de Usar:** Simplemente deposite los tomates y la máquina hace el resto.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>**Construcción Duradera:** Hecha con materiales resistentes para soportar el trabajo diario.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>**Mantenimiento Mínimo:** Diseñada para ser confiable y fácil de mantener.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios / ROI Section -->
+        <section id="beneficios" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Una Inversión que se Paga Sola.</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">El beneficio más importante es el económico. Vea cómo su inversión se convierte en ganancia.</p>
+                <div class="mt-12 max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-inner">
+                    <h3 class="text-2xl font-bold text-gray-800">Retorno de la Inversión (ROI) en <span class="highlight-text">10 Días</span></h3>
+                    <div class="mt-6 flex flex-col md:flex-row justify-around items-center gap-8">
+                        <div class="text-center">
+                            <p class="text-5xl font-extrabold text-green-600">$5,099</p>
+                            <p class="text-gray-600 font-semibold">Costo Único de la Máquina</p>
+                        </div>
+                        <div class="text-4xl font-thin text-gray-300">&rarr;</div>
+                        <div class="text-center">
+                            <p class="text-5xl font-extrabold text-green-600">$562</p>
+                            <p class="text-gray-600 font-semibold">Ahorro Diario en Mano de Obra</p>
+                        </div>
+                         <div class="text-4xl font-thin text-gray-300">&rarr;</div>
+                        <div class="text-center">
+                            <p class="text-5xl font-extrabold text-green-600">100%</p>
+                            <p class="text-gray-600 font-semibold">Inversión Recuperada en 10 Días</p>
+                        </div>
+                    </div>
+                     <p class="mt-8 text-gray-700">A partir del día 11, la máquina le genera **ganancia pura** todos los días. Es la decisión financiera más inteligente para su cosecha.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">¿Listo para Optimizar su Cosecha?</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Contáctenos hoy mismo para una demostración en campo. Vea con sus propios ojos cómo puede transformar su producción.</p>
+                <a href="mailto:ventas@mecampoinnovation.com?subject=Información sobre el Clasificador de Tomates" class="mt-8 inline-block bg-green-600 text-white font-bold px-10 py-4 rounded-full text-xl hover:bg-green-700 transition transform hover:scale-105">Solicitar una Demostración</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 MeCampo Innovation. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Hecho en Oaxaca, para los agricultores de Oaxaca.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para el menú móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
